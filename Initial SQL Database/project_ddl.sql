@@ -51,4 +51,4 @@ CREATE TABLE task_reminder (
     reminder_triggered BOOLEAN DEFAULT FALSE
 );
 
-INSERT INTO categories (category_name) VALUES ('Category example');
+INSERT INTO categories (category_name) VALUES ('General');
