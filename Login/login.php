@@ -27,6 +27,9 @@
                 <div class="form-row">
                     <input type="submit">
                 </div>
+                <div class="form-row create-acc">
+                    <p>New here? <a href="#">Create an account</a>.</p>
+                </div>
             </div>
         </form>
 

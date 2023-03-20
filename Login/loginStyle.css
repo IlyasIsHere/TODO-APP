@@ -26,6 +26,8 @@ video {
     width: 60vh;
     padding: 20px 40px;
     padding-top: 0px;
+    border-color: #5b30d2;
+    padding-bottom: 0px;
 }
 
 label {
@@ -40,6 +42,8 @@ input[type="text"], input[type="password"] {
     width: 60%;
     background-color: rgba(255, 255, 255, 0.2);
     color: lavender;
+    border: none;
+    outline: none;
 }
 
 input[type="submit"] {
@@ -49,6 +53,15 @@ input[type="submit"] {
     flex-basis: 100%;
     background-color: rgba(134, 160, 255, 0.3);
     color: white;
+    background-color: #5b30d2;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #341588;
+    color: #818181;
 }
 
 .form-row {
@@ -60,4 +73,12 @@ input[type="submit"] {
 
 h2 {
     text-align: center;
+}
+
+.create-acc {
+    font-size: 15pt;
+}
+
+a {
+    color: #5b30d2;
 }
