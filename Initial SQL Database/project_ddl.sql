@@ -50,3 +50,5 @@ CREATE TABLE task_reminder (
     reminder_date_time DATETIME NOT NULL,
     reminder_triggered BOOLEAN DEFAULT FALSE
 );
+
+INSERT INTO categories (category_name) VALUES ('Category example');

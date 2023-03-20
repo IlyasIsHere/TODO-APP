@@ -1,0 +1,76 @@
+* {
+    font-family: Calibri;
+    border-radius: 10px;
+}
+
+video {
+    position: fixed;
+    top: -200px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.addTask-card {
+    z-index: 2;
+    color: white;
+    border: solid;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25pt;
+    width: 180vh;
+    padding: 20px 40px;
+    padding-top: 0px;
+    border-color: #5b30d2;
+    padding-bottom: 0px;
+}
+
+label {
+    box-sizing: border-box;
+    width: 40%;
+}
+
+input[type="text"], input[type="password"] {
+    box-sizing: border-box;
+    font-size: 20pt;
+    padding: 10px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: lavender;
+    border: none;
+    outline: none;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 25pt;
+    flex-basis: 100%;
+    background-color: rgba(134, 160, 255, 0.3);
+    color: white;
+    background-color: #5b30d2;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #341588;
+    color: #818181;
+}
+
+.form-row {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
