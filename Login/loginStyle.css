@@ -28,6 +28,7 @@ video {
     padding-top: 0px;
     border-color: #5b30d2;
     padding-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.09);
 }
 
 label {
@@ -44,6 +45,12 @@ input[type="text"], input[type="password"] {
     color: lavender;
     border: none;
     outline: none;
+    color: black;
+}
+
+input[type="text"]:hover, input[type="password"]:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: 0.3s;
 }
 
 input[type="submit"] {
@@ -61,7 +68,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #341588;
-    color: #818181;
+    color: rgba(255, 255, 255, 0.68);
+    transition: 0.2s;
 }
 
 .form-row {
@@ -81,4 +89,8 @@ h2 {
 
 a {
     color: #5b30d2;
+}
+
+a:hover {
+    color: grey;
 }

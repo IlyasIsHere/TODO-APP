@@ -56,7 +56,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST["name"];
     $desc = $_POST["description"];
     $date = $_POST["date"];
-    if ($stmt->execute([$name, $desc, $date])) {
+    $categ = $_POST["category"];
+
+    $success1 = $stmt->execute([$name, $desc, $date]);
+    $id = $pdo->lastInsertId();
+
+    $success2 = $pdo->exec("INSERT INTO task_category (task_id, category_id) VALUES ($id, $categ)");
+
+    if ($success1 && $success2) {
         ?>
 <div class="success">Task added!</div>
 <?php
