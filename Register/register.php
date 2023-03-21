@@ -58,9 +58,9 @@ require_once '../include/pdo.php';
 		} else {
 			$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-			$stmt = $conn->prepare("INSERT INTO users (username, email, hashed_pwd) VALUES (?, ?, ?)");
+			$stmt = $pdo->prepare("INSERT INTO users (username, email, hashed_pwd) VALUES (?, ?, ?)");
 			$stmt->execute([$username, $email, $hashed_password]);
-			$user_id = $conn->lastInsertId();
+			$user_id = $pdo->lastInsertId();
 
 			echo "Registration successful.";
 		}

@@ -1,0 +1,136 @@
+* {
+    font-family: Calibri;
+    border-radius: 10px;
+}
+
+video {
+    position: fixed;
+    top: -200px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.study .btn,
+.personal .btn,
+.work .btn {
+    background-color: rgba(155, 89, 182, 0.8);
+    color: #fff;
+    font-size: 2rem;
+    padding: 25px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    margin: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+}
+
+.study .btn:before,
+.personal .btn:before,
+.work .btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    transform: scale(1.2);
+    z-index: -1;
+    transition: all 0.3s ease-out;
+}
+
+.study .btn:hover:before,
+.personal .btn:hover:before,
+.work .btn:hover:before {
+    transform: scale(1.3);
+}
+
+.study .btn:hover {
+    background-color: rgba(142, 68, 173, 0.8);
+    box-shadow: 0px 10px 20px rgba(142, 68, 173, 0.3);
+}
+
+.personal .btn:hover {
+    background-color: rgba(41, 128, 185, 0.8);
+    box-shadow: 0px 10px 20px rgba(41, 128, 185, 0.3);
+}
+
+.work .btn:hover {
+    background-color: rgba(46, 204, 113, 0.8);
+    box-shadow: 0px 10px 20px rgba(46, 204, 113, 0.3);
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.task-row {
+    background-color: #f2f2f2;
+}
+
+.task-row:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.task-row:hover {
+    background-color: #cccccc;
+}
+
+.task-name {
+    font-weight: bold;
+}
+
+.task-description {
+    max-width: 300px;
+}
+
+.due-date {
+    text-align: center;
+}
+
+.task-status {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+th {
+    background-color: #444444;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
