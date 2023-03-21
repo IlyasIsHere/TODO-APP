@@ -18,17 +18,16 @@ video {
     color: white;
     border: solid;
     backdrop-filter: blur(10px);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     font-size: 25pt;
-    width: 100vh;
+    width: 50vw;
     padding: 20px 40px;
     padding-top: 0px;
     border-color: rgba(91, 48, 210, 0.16);
     padding-bottom: 10px;
     background-color: rgba(255, 255, 255, 0.09);
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 20px;
 }
 
 label {
@@ -85,13 +84,9 @@ option {
     background-color: green;
     color: white;
     padding: 10px;
-    display: inline-block;
     font-size: 16pt;
-    position: absolute;
-    left: 50%;
-    bottom: 40px;
-    transform: translate(-50%, 0%);
-    width: 50vh;
+    width: 25vw;
     text-align: center;
+    margin: auto;
 }
 
