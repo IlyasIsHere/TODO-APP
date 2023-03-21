@@ -80,3 +80,18 @@ h2 {
 option {
     color: black;
 }
+
+.success {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    font-size: 16pt;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 0%);
+    width: 50vh;
+    text-align: center;
+}
+
