@@ -11,11 +11,16 @@ require_once '../include/sessionCheck.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add a task</title>
     <link rel="stylesheet" href="addTaskStyle.css">
+    <link rel="stylesheet" href="../include/bg-style.css">
+    <link rel="stylesheet" href="../include/logout-style.css">
 </head>
 <body>
 <video autoplay loop playsinline muted>
     <source src="../Login/Pexels%20Videos%204703.mp4">
 </video>
+<a href="../Logout/logout.php" class="logout">
+    <button>Log Out</button>
+</a>
 <div class="addTask-card">
     <h2>Add a Task</h2>
     <form method="post" action="">

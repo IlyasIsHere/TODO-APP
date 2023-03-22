@@ -15,6 +15,7 @@ if (isset($_SESSION["USER_ID"])) {
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
+    <link rel="stylesheet" href="../include/bg-style.css">
     <link rel="stylesheet" href="registerStyle.css">
 </head>
 <body>
@@ -43,6 +44,9 @@ if (isset($_SESSION["USER_ID"])) {
                 </div>
                 <div class="form-row">
                     <input type="submit" name="register" value="Register">
+                </div>
+                <div class="form-row signin">
+                    <p>You already have an account? <a href="../Login/login.php">Login</a></p>
                 </div>
         </div>
         </form>

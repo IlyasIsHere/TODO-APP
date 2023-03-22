@@ -45,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="loginStyle.css">
+    <link rel="stylesheet" href="../include/bg-style.css">
 </head>
 <body>
     <video autoplay loop playsinline muted>
@@ -72,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                     <input type="submit">
                 </div>
                 <div class="form-row create-acc">
-                    <p>New here? <a href="../Register/register.php">Create an account</a>.</p>
+                    <p>New here? <a href="../Register/register.php">Create an account</a></p>
                 </div>
             </div>
         </form>
