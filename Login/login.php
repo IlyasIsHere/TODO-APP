@@ -2,14 +2,19 @@
 session_start();
 require_once '../include/pdo.php';
 
+if (isset($_SESSION["USER_ID"])) {
+    header('location: ../Dashboard/dashboard.php');
+    exit();
+}
+
 $username_err = "";
 $password_err = "";
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $username = $_POST["username"];
     $pass = $_POST["password"];
-    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->execute([$username]);
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
+    $stmt->execute([$username, $username]);
 
     if ($stmt->rowCount() == 0) {
         $username_err = "There is no account with this username.";
@@ -23,6 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         else {
             $_SESSION["USER_ID"] = $user_row["user_id"];
             $_SESSION["USER_EMAIL"] = $user_row["email"];
+            header('location: ../Dashboard/dashboard.php');
+            exit();
         }
     }
 }
@@ -48,24 +55,24 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         <form method="post">
             <div class="form-container">
                 <div class="form-row">
-                    <label for="username">Username</label>
+                    <label for="username">Username or Email</label>
                     <input type="text" name="username" id="username" required>
                 </div>
-                <div class="form-row">
+                <div class="form-row err">
                     <?php echo $username_err ?>
                 </div>
                 <div class="form-row">
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" required>
                 </div>
-                <div class="form-row">
+                <div class="form-row err">
                     <?php echo $password_err ?>
                 </div>
                 <div class="form-row">
                     <input type="submit">
                 </div>
                 <div class="form-row create-acc">
-                    <p>New here? <a href="#">Create an account</a>.</p>
+                    <p>New here? <a href="../Register/register.php">Create an account</a>.</p>
                 </div>
             </div>
         </form>

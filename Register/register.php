@@ -1,5 +1,11 @@
 <?php
+session_start();
 require_once '../include/pdo.php';
+
+if (isset($_SESSION["USER_ID"])) {
+    header('location: ../Dashboard/dashboard.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html>

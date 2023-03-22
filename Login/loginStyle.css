@@ -94,3 +94,8 @@ a {
 a:hover {
     color: grey;
 }
+
+.err {
+    font-size: 15pt;
+    color: red;
+}

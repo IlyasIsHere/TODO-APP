@@ -1,5 +1,6 @@
 <?php
 require_once '../include/pdo.php';
+require_once '../include/sessionCheck.php';
 ?>
 <!doctype html>
 <html lang="en">
