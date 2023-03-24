@@ -1,32 +1,9 @@
-* {
-    font-family: Calibri;
-    border-radius: 10px;
-}
-
-video {
-    position: fixed;
-    top: -200px;
-    left: 0px;
-    right: 0px;
-    z-index: -1;
-    min-width: 100%;
-    min-height: 100%;
-}
-
 #categories {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-}
-
-#categories {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
 
 .study .btn,
@@ -133,4 +110,8 @@ th,
 td {
     border: 1px solid #dddddd;
     padding: 8px;
+}
+
+td, th {
+    border: none;
 }

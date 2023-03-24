@@ -68,11 +68,13 @@ if (isset($_SESSION["USER_ID"])) {
 		} else {
 			$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
+            // TODO check if the username of email already exists
+
 			$stmt = $pdo->prepare("INSERT INTO users (username, email, hashed_pwd) VALUES (?, ?, ?)");
 			$stmt->execute([$username, $email, $hashed_password]);
 			$user_id = $pdo->lastInsertId();
 
-			echo "Registration successful.";
+			echo "<div class='info-success'>Registration successful.</div>";
 		}
 	}
 	?>

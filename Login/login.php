@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                     <?php echo $password_err ?>
                 </div>
                 <div class="form-row">
-                    <input type="submit">
+                    <input type="submit" value="Login">
                 </div>
                 <div class="form-row create-acc">
                     <p>New here? <a href="../Register/register.php">Create an account</a></p>
