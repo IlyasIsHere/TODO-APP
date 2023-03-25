@@ -1,6 +1,6 @@
 <?php
 echo "<div class='navbar'>
-        <a href='../Logout/logout.php'>
+        <a href='../Logout/logout.php' id='logout'>
             <button>Log Out</button>
         </a>
         <a href='../addTask/addTask.php'>

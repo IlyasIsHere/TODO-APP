@@ -13,6 +13,10 @@
     margin: 0px auto;
     position: relative;
     bottom: 20px;
+
+    box-shadow: 1px 0px 68px 6px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 1px 0px 68px 6px rgba(0,0,0,0.74);
+    -moz-box-shadow: 1px 0px 68px 6px rgba(0,0,0,0.74);
 }
 
 body {
@@ -50,11 +54,6 @@ input[type="submit"] {
     border: none;
 }
 
-input[type="submit"]:hover {
-    background-color: #341588;
-    color: #818181;
-}
-
 .form-row {
     display: flex;
     column-gap: 10px;
@@ -83,6 +82,7 @@ option {
 input[type="text"]:hover, select:hover, textarea:hover, input[type="date"]:hover {
     background-color: rgba(255, 255, 255, 0.6);
     transition: 0.3s;
+    color: black;
 }
 
 input[type="submit"]:hover {

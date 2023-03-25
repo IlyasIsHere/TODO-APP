@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $stmt->execute([$username, $username]);
 
     if ($stmt->rowCount() == 0) {
-        $username_err = "There is no account with this username.";
+        $username_err = "There is no account with this username or email.";
     }
     else {
         $user_row = $stmt->fetch();
@@ -46,6 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     <title>Login</title>
     <link rel="stylesheet" href="loginStyle.css">
     <link rel="stylesheet" href="../include/bg-style.css">
+    <link rel="stylesheet" href="../include/input-style.css">
+
 </head>
 <body>
     <video autoplay loop playsinline muted>
@@ -57,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             <div class="form-container">
                 <div class="form-row">
                     <label for="username">Username or Email</label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="username" id="username" value="<?php echo $_POST['username'] ?? ''; ?>" required>
                 </div>
                 <div class="form-row err">
                     <?php echo $username_err ?>

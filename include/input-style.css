@@ -1,0 +1,11 @@
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus {
+    transition: 0.3s;
+
+    box-shadow: 1px 0px 30px 6px rgba(64,60,185,0.74);
+    -webkit-box-shadow: 1px 0px 30px 6px rgba(64,60,185,0.74);
+    -moz-box-shadow: 1px 0px 30px 6px rgba(64,60,185,0.74);
+}

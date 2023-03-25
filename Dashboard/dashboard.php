@@ -14,6 +14,7 @@ require_once '../include/sessionCheck.php';
     <link rel="stylesheet" href="dashboardStyle.css">
     <link rel="stylesheet" href="../include/bg-style.css">
     <link rel="stylesheet" href="../include/navbar-style.css">
+    <link rel="stylesheet" href="../include/input-style.css">
 </head>
 <body>
     <video autoplay loop playsinline muted>
@@ -42,7 +43,7 @@ class TaskManager
         $this->pdo = $pdo;
     }
     
-    public function displayTasksByCategory($category)
+    public function displayTasksByCategory($category): void
     {
         $query = "SELECT t.task_name, t.task_description, t.due_date, t.task_status 
                   FROM tasks t 

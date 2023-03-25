@@ -17,6 +17,8 @@ if (isset($_SESSION["USER_ID"])) {
     <title>Register</title>
     <link rel="stylesheet" href="../include/bg-style.css">
     <link rel="stylesheet" href="registerStyle.css">
+    <link rel="stylesheet" href="../include/input-style.css">
+
 </head>
 <body>
     <video autoplay loop playsinline muted>

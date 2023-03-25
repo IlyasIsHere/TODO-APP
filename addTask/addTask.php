@@ -13,6 +13,7 @@ require_once '../include/sessionCheck.php';
     <link rel="stylesheet" href="addTaskStyle.css">
     <link rel="stylesheet" href="../include/bg-style.css">
     <link rel="stylesheet" href="../include/navbar-style.css">
+    <link rel="stylesheet" href="../include/input-style.css">
 </head>
 <body>
 <video autoplay loop playsinline muted>
@@ -65,10 +66,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $success1 = $stmt->execute([$name, $desc, $date]);
     $id = $pdo->lastInsertId();
+    $user_id = $_SESSION["USER_ID"];
 
     $success2 = $pdo->exec("INSERT INTO task_category (task_id, category_id) VALUES ($id, $categ)");
+    $success3 = $pdo->exec("INSERT INTO user_task (user_id, task_id) VALUES ($user_id, $id)");
 
-    if ($success1 && $success2) {
+    if ($success1 && $success2 && $success3) {
         ?>
 <div class="success">Task added!</div>
 <?php
