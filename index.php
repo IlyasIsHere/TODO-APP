@@ -1,3 +1,3 @@
 <?php
-header('location: ../Dashboard/dashboard.php');
+header('location: Dashboard/dashboard.php');
 exit();
