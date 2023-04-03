@@ -22,7 +22,8 @@ require_once '../include/sessionCheck.php';
         <source src="../Login/Pexels%20Videos%204703.mp4">
     </video>
     <?php require_once '../include/navbar.php';
-    if (isset($_GET["taskDeleted"])) echo "<div class='info-deleted'>Task deleted successfully</div>";
+    if (isset($_GET["taskDeleted"])) echo "<div class='info deleted'>Task deleted successfully</div>";
+    if (isset($_GET["taskEdited"])) echo "<div class='info edited'>Task edited successfully</div>";
     ?>
 
     <div id="categories">
@@ -69,7 +70,7 @@ class TaskManager
             echo "<tr class='task-row'>";
             echo "<td class='icon-column'>
                     <a href='../deleteTask/deleteTask.php?deleteTaskID=$taskID&categID=$category'><i class='fa-solid fa-trash fa-lg' style='color: #ff0000;'></i></a>
-                    <a href='#'><i class='fa-solid fa-pen-to-square fa-lg' style='color: #00ad00;'></i></a> 
+                    <a href='../editTask/editTask.php?editTaskID=$taskID&categID=$category'><i class='fa-solid fa-pen-to-square fa-lg' style='color: #00ad00;'></i></a> 
                   </td>";
             // TODO EDIT TASK
             echo "<td class='task-name'>".$task['task_name']."</td>";
